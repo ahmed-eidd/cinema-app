@@ -6,6 +6,8 @@ import store, { history } from './service/configureStore';
 import { ConnectedRouter } from 'connected-react-router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
+import './styles/globals.css';
+import './styles/variables.css';
 
 ReactDOM.render(
   <React.StrictMode>
