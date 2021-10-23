@@ -7,7 +7,7 @@ import { NavStyled } from './NavStyled';
 const Nav = () => {
   return (
     <NavStyled>
-      <AppLogo />
+      <AppLogo to='/' />
       <SearchBar />
       <NavProfile name='Ahmed Eid' />
     </NavStyled>

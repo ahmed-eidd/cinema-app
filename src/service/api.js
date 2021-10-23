@@ -1,5 +1,8 @@
-import axios from 'axios'
+import axios from 'axios';
 
+const backendUrl = 'https://api.themoviedb.org/3/movie/';
 
-// const backendUrl= 'test'
-// axios.defaults.baseURL = backendUrl;
+axios.defaults.baseURL = backendUrl;
+axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] =
+  'application/x-www-form-urlencoded';
