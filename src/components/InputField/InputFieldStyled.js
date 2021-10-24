@@ -7,13 +7,12 @@ export const InputFieldStyled = styled.div`
   .InputField {
     border: none;
     background: transparent;
-    ${({ theme }) =>
-      theme &&
-      css &&
-      `
+    ${({ theme }) => theme
+      && css
+      && `
     border-bottom: ${
-      theme.border.sm +  ' solid '  + theme.color.textColor
-    };
+  `${theme.border.sm} solid ${theme.color.textColor}`
+};
     font-size:  ${theme.fontSizes.lg};
     color: ${theme.color.textColor};
     `}

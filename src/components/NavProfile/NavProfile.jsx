@@ -20,17 +20,17 @@ const NavProfile = ({ name, img }) => {
       ) : (
         <div
           onClick={() => test.current.onclick()}
-          className='NavProfile__Initial'
+          className="NavProfile__Initial"
         >
           {name.split('')[0]}
         </div>
       )}
-      <p className='NavProfile__Name'>{name}</p>
+      <p className="NavProfile__Name">{name}</p>
       <i
         ref={test}
         onClick={() => setMenuOpen(!menuOpen)}
-        className='fas fa-chevron-down NavProfile__Icon'
-      ></i>
+        className="fas fa-chevron-down NavProfile__Icon"
+      />
 
       <NavProfileMenu
         open={menuOpen}

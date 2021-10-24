@@ -30,8 +30,7 @@ export const SearchBarStyled = styled.div`
     border-radius: 20px !important;
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
-    ${({ currentTheme }) =>
-      currentTheme === constants.DARK_THEME ? dark : light};
+    ${({ currentTheme }) => (currentTheme === constants.DARK_THEME ? dark : light)};
   }
   .SearchBar__Icon {
     position: absolute;

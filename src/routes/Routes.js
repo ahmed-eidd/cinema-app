@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch } from 'react-router';
+import { useSelector } from 'react-redux';
 import Layout from '../components/Layout/Layout';
 import Home from '../containers/Home/Home';
 import Login from '../containers/Login/Login';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
-import { useSelector } from 'react-redux';
 import AuthLayout from '../components/AuthLayout/AuthLayout';
 
 const Routes = () => {
@@ -13,8 +13,8 @@ const Routes = () => {
   console.log(isLoggedIn);
   return (
     <Switch>
-        <ProtectedRoute path='/' exact  component={Home} layout={Layout}  />
-        <AuthRoute path='/login' exact component={Login} layout={AuthLayout} />
+      <ProtectedRoute path="/" exact component={Home} layout={Layout} />
+      <AuthRoute path="/login" exact component={Login} layout={AuthLayout} />
     </Switch>
   );
 };

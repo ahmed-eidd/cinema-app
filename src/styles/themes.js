@@ -1,8 +1,8 @@
 import { constants } from '../helpers/constants';
 
-export const Theme = (currentTheme) => {
-  const themeColor =
-    currentTheme === constants.LIGHT_THEME ? lightTheme : darkTheme;
+export default function getTheme(currentTheme) {
+  const themeColor = currentTheme === constants.LIGHT_THEME ? lightTheme : darkTheme;
+
   return {
     color: {
       primary: '#ffcc33',
@@ -28,7 +28,7 @@ export const Theme = (currentTheme) => {
       primary: 'Poppins',
     },
   };
-};
+}
 
 const darkTheme = {
   textColor: '#fff',

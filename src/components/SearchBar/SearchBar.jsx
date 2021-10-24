@@ -4,16 +4,16 @@ import { useSelector } from 'react-redux';
 import { SearchBarStyled } from './SearchBarStyled';
 
 const SearchBar = () => {
-  const currentTheme = useSelector(state => state.theme.currentTheme)
+  const currentTheme = useSelector((state) => state.theme.currentTheme);
   return (
     <SearchBarStyled currentTheme={currentTheme}>
       <Form.Control
-        size='lg'
-        className='SearchBar'
-        type='text'
-        placeholder='Search for a movie ..'
+        size="lg"
+        className="SearchBar"
+        type="text"
+        placeholder="Search for a movie .."
       />
-      <i className='fas fa-search SearchBar__Icon'></i>
+      <i className="fas fa-search SearchBar__Icon" />
     </SearchBarStyled>
   );
 };

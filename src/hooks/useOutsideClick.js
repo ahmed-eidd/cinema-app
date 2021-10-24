@@ -11,7 +11,7 @@ const useOutsideClick = (onClick) => {
 
       onClick();
     },
-    [onClick, ref]
+    [onClick, ref],
   );
 
   useEffect(() => {

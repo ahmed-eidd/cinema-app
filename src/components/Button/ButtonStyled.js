@@ -5,7 +5,7 @@ export const ButtonStyled = styled.button`
   font-size: 1.1rem;
   color: ${({ theme }) => theme.color.textColor};
   background: transparent;
-  border: ${({ theme }) => theme.border.lg + ' solid ' + theme.color.primary};
+  border: ${({ theme }) => `${theme.border.lg} solid ${theme.color.primary}`};
   font-weight: 500;
   position: relative;
   &:before {

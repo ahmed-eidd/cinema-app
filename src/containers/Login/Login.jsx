@@ -1,12 +1,11 @@
 import { Formik, Form } from 'formik';
 import React, { useEffect } from 'react';
+import * as yup from 'yup';
+import { useDispatch, useSelector } from 'react-redux';
 import InputField from '../../components/InputField/InputFIeld';
 import Button from '../../components/Button/Button';
 import { LoginStyled } from './LoginStyled';
-import * as yup from 'yup';
-import { useDispatch } from 'react-redux';
 import { LoginUserAction } from '../../store/auth/actions';
-import { useSelector } from 'react-redux';
 
 const schema = yup.object().shape({
   userName: yup.string().default('').required().min(4),
@@ -15,8 +14,8 @@ const schema = yup.object().shape({
 
 const Login = () => {
   useEffect(() => {
-    console.log('render')
-  },[])
+    console.log('render');
+  }, []);
   const dispatch = useDispatch();
 
   const loading = useSelector((state) => state.auth.loading);
@@ -34,22 +33,22 @@ const Login = () => {
         auto
       >
         {() => (
-          <Form className='Login__Form'>
+          <Form className="Login__Form">
             <InputField
-              autoComplete='off'
-              name='userName'
-              type='text'
-              placeholder='Username'
+              autoComplete="off"
+              name="userName"
+              type="text"
+              placeholder="Username"
             />
             <InputField
-              name='password'
-              type='password'
-              placeholder='Password'
+              name="password"
+              type="password"
+              placeholder="Password"
             />
             <Button
               loading={loading}
-              className='Login__Form__Btn'
-              type='submit'
+              className="Login__Form__Btn"
+              type="submit"
             >
               Log in
             </Button>

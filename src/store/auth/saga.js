@@ -7,6 +7,6 @@ function* loginUserSaga({ payload }) {
   yield put(LoginUserSuccessAction(payload));
 }
 
-export default function* AuthSaga () {
+export default function* AuthSaga() {
   yield takeLatest(actionTypes.LOGIN_USER, loginUserSaga);
 }

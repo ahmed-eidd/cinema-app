@@ -9,21 +9,22 @@ const InputFIeld = ({
   style,
   className,
   ...props
-}) => {
-  return (
-    <InputFieldStyled className={className}>
-      <label htmlFor={name}> {label}</label>
-      <Field
-        name={name}
-        {...props}
-        className='InputField'
-        placeholder={placeholder}
-      />
-      <ErrorMessage name={name}>
-        {(msg) => <p className='ErrorMessage'>{msg}</p>}
-      </ErrorMessage>
-    </InputFieldStyled>
-  );
-};
+}) => (
+  <InputFieldStyled className={className}>
+    <label htmlFor={name}>
+      {' '}
+      {label}
+    </label>
+    <Field
+      name={name}
+      {...props}
+      className="InputField"
+      placeholder={placeholder}
+    />
+    <ErrorMessage name={name}>
+      {(msg) => <p className="ErrorMessage">{msg}</p>}
+    </ErrorMessage>
+  </InputFieldStyled>
+);
 
 export default InputFIeld;

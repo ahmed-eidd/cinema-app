@@ -1,17 +1,17 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable react/prop-types */
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Redirect, Route } from 'react-router';
 import { useSelector } from 'react-redux';
-import { Redirect, Route, useLocation } from 'react-router';
 
 const AuthRoute = ({ component: Component, layout: Layout, ...rest }) => {
-  const location = useLocation();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  console.log(isLoggedIn);
   if (isLoggedIn) {
     return (
       <Redirect
         to={{
           pathname: '/',
-          state: { from: location },
         }}
       />
     );

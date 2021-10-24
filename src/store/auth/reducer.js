@@ -4,12 +4,11 @@ export const actionTypes = {
   LOGIN_USER_FAIL: 'LOGIN_USER_FAIL',
   LOGOUT_USER: 'LOGOUT_USER',
 };
-
 const initialState = {
   userName: null,
   token: null,
   loading: false,
-  isLoggedIn: false
+  isLoggedIn: false,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -27,7 +26,7 @@ const authReducer = (state = initialState, action) => {
         ...state,
         userName: payload.userName,
         token: `${payload.password}${payload.userName}`,
-        isLoggedIn:true,
+        isLoggedIn: true,
         loading: false,
       };
     }
@@ -42,7 +41,7 @@ const authReducer = (state = initialState, action) => {
         ...state,
         userName: null,
         token: null,
-        isLoggedIn:false,
+        isLoggedIn: false,
         loading: false,
       };
     }
