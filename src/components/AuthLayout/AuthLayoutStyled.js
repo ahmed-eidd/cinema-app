@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const LoginLayoutStyled = styled.div`
+export const AuthLayoutStyled = styled.div`
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr repeat(8, 11.75rem) 1fr;
-  .LoginLayout {
+  .AuthLayout {
     &__Nav {
       padding: 3rem 0;
       grid-column: 2/4;

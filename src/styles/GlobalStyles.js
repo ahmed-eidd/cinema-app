@@ -23,8 +23,10 @@ const GlobalStyle = createGlobalStyle`
   select:-webkit-autofill,
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
-   background-color: transparent !important;
-    -webkit-box-shadow: 0 0 0 50px white inset;
+   background-color: ${({ theme }) => theme.color.contentColor} !important;
+    /* -webkit-box-shadow: 0 0 0 50px ${({ theme }) =>
+      theme.color.contentColor} inset !important; */
+    color: #ffffff !important;
 }
   
 `;

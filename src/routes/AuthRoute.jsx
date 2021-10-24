@@ -1,21 +1,22 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Route, Redirect, useLocation } from 'react-router';
+import { Redirect, Route, useLocation } from 'react-router';
 
-const ProtectedRoute = ({ component: Component, layout: Layout, ...rest }) => {
+const AuthRoute = ({ component: Component, layout: Layout, ...rest }) => {
   const location = useLocation();
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-
-  if (!isLoggedIn) {
+  console.log(isLoggedIn);
+  if (isLoggedIn) {
     return (
       <Redirect
         to={{
-          pathname: '/login',
+          pathname: '/',
           state: { from: location },
         }}
       />
     );
   }
+
   return (
     <Route
       {...rest}
@@ -28,4 +29,4 @@ const ProtectedRoute = ({ component: Component, layout: Layout, ...rest }) => {
   );
 };
 
-export default ProtectedRoute;
+export default AuthRoute;

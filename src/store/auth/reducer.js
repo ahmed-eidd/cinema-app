@@ -9,6 +9,7 @@ const initialState = {
   userName: null,
   token: null,
   loading: false,
+  isLoggedIn: false
 };
 
 const authReducer = (state = initialState, action) => {
@@ -26,6 +27,7 @@ const authReducer = (state = initialState, action) => {
         ...state,
         userName: payload.userName,
         token: `${payload.password}${payload.userName}`,
+        isLoggedIn:true,
         loading: false,
       };
     }
@@ -40,6 +42,8 @@ const authReducer = (state = initialState, action) => {
         ...state,
         userName: null,
         token: null,
+        isLoggedIn:false,
+        loading: false,
       };
     }
     default:
