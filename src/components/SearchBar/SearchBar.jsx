@@ -15,13 +15,11 @@ const SearchBar = () => {
   const [query, setQuery] = useState('');
 
   const updateQuery = () => {
-    // A search query api call.
     if (query.length > 3) {
-
       dispatch(fetchSearchedMoviesAction(query, currentPage));
-    }
-    if (location.pathname !== '/results') {
-      history.push('/results');
+      if (location.pathname !== '/results' && query !== '') {
+        history.push('/results');
+      }
     }
   };
 
