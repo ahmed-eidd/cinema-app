@@ -4,10 +4,9 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import configureStore from './service/configureStore';
+import { store } from './service/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const store = configureStore({});
 
 ReactDOM.render(
   // eslint-disable-next-line react/jsx-filename-extension

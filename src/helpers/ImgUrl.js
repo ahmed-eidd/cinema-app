@@ -1,0 +1,1 @@
+export const ImgUrl = (link,quality='original') => `https://image.tmdb.org/t/p/${quality}${link}`;

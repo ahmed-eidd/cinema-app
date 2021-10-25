@@ -7,15 +7,23 @@ export const MovieSliderStyled = styled.div`
   .MovieSlider {
     &__Img {
       width: 90%;
+      max-height: 25rem;
+      object-fit: cover;
+      background-position: center;
       display: block;
       margin: 0 auto;
+    }
+
+    &__Title {
+      font-size: 3rem;
+      font-weight: bold;
     }
   }
 
   .MovieSlider__Caption {
     position: absolute;
-    top: 70%;
-    left: 10%;
+    top: 40%;
+    left: 15%;
 
     &__TrailerBtn {
       border: none;

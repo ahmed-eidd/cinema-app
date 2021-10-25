@@ -1,5 +1,4 @@
 import { Formik, Form } from 'formik';
-import React, { useEffect } from 'react';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import InputField from '../../components/InputField/InputFIeld';
@@ -13,9 +12,7 @@ const schema = yup.object().shape({
 });
 
 const Login = () => {
-  useEffect(() => {
-    console.log('render');
-  }, []);
+
   const dispatch = useDispatch();
 
   const loading = useSelector((state) => state.auth.loading);
